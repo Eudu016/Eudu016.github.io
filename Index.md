@@ -1,77 +1,152 @@
-<!DOCTYPE html">
+```Java script
+var moveButton = document.querySelector("button:nth-child(2)");
 
-<html>
+var correctlyButton = document.querySelector("button:first-child");
 
-<head>
+moveButton.addEventListener("click", function () {
 
-	<title>Comprar Computador</title></head>
+  var vertical = Math.floor(Math.random() * 400);
 
-<body>
+  var horizontal = Math.floor(Math.random() * 400);
 
-	<h1>Você vai comprar um computador para mim?</h1>
+  moveButton.style.position = "absolute";
 
-	<button onclick="nao()">Não</button>
+  moveButton.style.left = vertical + "px";
 
-	<button onclick>
+  moveButton.style.top = horizontal + "px";
 
-<html>
+});
 
-<head>
+correctlyButton.addEventListener("click", function () {
 
-	<title>Pergunta</title>
+  alert("Resposta correta! Vamo comer um empadão");
 
-	<style type="text/css">
+});
 
-		body {
+```
+``` Css
+body {
 
-			display: flex; 
+  top: 50%;
 
-			flex-direction: column; 
+  left: 50%;
 
-			align-items: center;
+  position: absolute;
 
-			margin-top: 50px;
+  margin: -100px 0 0 -150px;
 
-		}
+  font-family: "Roboto", sans-serif;
 
-		button {
+}
 
-			margin-top: 20px;
+h1 {
 
-			padding: 10px 20px;
+  font-weight: 300;
 
-			font-size: 18px;
+}
 
-		}
+button {
 
-	</style>
+  padding: 10px 40px;
 
-	<script type="text/javascript">
+  border-radius: 5px;
 
-		function moverBotao() {
+  font-family: "Roboto", sans-serif;
 
-			var botao = document.getElementById("botao-nao");
+  border: transparent;
 
-			var novaPosicao = Math.floor(Math.random() * 3); // escolhe uma nova posição (0, 1 ou 2)
+  color: white;
 
-			var posicoes = ["left: 50px", "left: 200px", "left: 350px"]; // array com as posições possíveis
+  cursor: pointer;
 
-			botao.style = posicoes[novaPosicao]; // muda a posição do botão para a nova posição escolhida
+  font-size: 16px;
 
-		}
+}
 
-	</script>
+button:first-child {
 
-</head>
+  background-color: green;
 
-<body>
+}
 
-	<h1>Vai comprar um computador para mim?</h1>
+button:nth-child(2) {
 
-	<button>Sim</button>
+  background-color: red;
 
-	<button id="botao-nao" onclick="moverBotao()">Não</button>
+}
 
-</body>
+div.buttons {
 
-</html>
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-rows: 1fr;
+
+  grid-column-gap: 100px;
+
+  margin-top: 30px;
+
+}
+
+```
+``` Html
+<div>
+
+  <h1>Quer namorar comigo?</h1>
+
+  <div class='buttons'>
+
+    <button>Sim</button>
+
+    <button>Não</button>
+
+  </div>
+
+</div>
+```
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+		
+
+	
+
+		
+
+		
+
+		
+
+		
+		
+
+		
+
+
+	
+
+
+	
+		
+
+			
+
